@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@course) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.text_field :title, placeholder:"title ...", hide_label: true %>
+   
+  </div>
+  <div class="form-inputs my-2">
+      <%= f.rich_text_area :content %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class:"btn btn-primary" %>
+  </div>
+<% end %>

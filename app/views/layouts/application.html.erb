@@ -6,11 +6,13 @@
     <%= csp_meta_tag %>
 
     <%= render "layouts/shared/styles/bootstrap" %>
+    <%= render "layouts/shared/head/header" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="">
+    <%= render "shared/navs/navbar" %>
     <%= render "layouts/shared/notices/devise_notices" %>
       <%= yield %>
     <%= render "layouts/shared/styles/js" %>
